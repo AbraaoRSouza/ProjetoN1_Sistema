@@ -1,3 +1,6 @@
+def exibirPorOrdemCadastro(usuarios):
+    print(usuarios)
+
 def cadastroUsuarios(usuarios):
     escolha=0
     while escolha!=1:
