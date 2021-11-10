@@ -1,3 +1,11 @@
+def excluirUsuario(usuarios):
+    busca=input("Digite o email do usuário: ")
+    removerItens = []
+    for chave, valor in usuarios.items(): 
+        if usuarios[chave] == busca:
+            removerItens.append(chave)
+    for item in removerItens:
+        usuarios.pop(item)
 def buscaUsuarioNome(usuarios):
     busca=input("Digite o nome do usuário: ")
     if usuarios.get(busca):
