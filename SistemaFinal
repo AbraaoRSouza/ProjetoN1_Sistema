@@ -1,3 +1,7 @@
+def exibirCadastroPorOrdemAlfabetica(usuarios):
+    for i in sorted(usuarios, key = usuarios.get, reverse=False):
+        print(i, usuarios[i])
+
 def exibirPorOrdemCadastro(usuarios):
     print(usuarios)
 
