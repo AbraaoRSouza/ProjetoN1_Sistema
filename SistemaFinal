@@ -1,3 +1,9 @@
+def buscaUsuarioNome(usuarios):
+    busca=input("Digite o nome do usuário: ")
+    if usuarios.get(busca):
+        print("Usuário:{} já está cadastrado".format(busca))
+    else:
+        print("Usuário não encontrado")
 def exibirCadastroPorOrdemAlfabetica(usuarios):
     for i in sorted(usuarios, key = usuarios.get, reverse=False):
         print(i, usuarios[i])
@@ -29,10 +35,10 @@ def menu(escolhaMenu,usuarios):
         cadastroUsuarios(usuarios)
         exibirCadastroPorOrdemAlfabetica(usuarios)
     elif escolhaMenu == 4:
-        cadastroUsuarios(usuarios)        
+        cadastroUsuarios(usuarios)
         buscaUsuarioNome(usuarios)
     elif escolhaMenu == 5: 
-        cadastroUsuarios(usuarios)   
+        cadastroUsuarios(usuarios)
         excluirUsuario(usuarios)
     elif escolhaMenu == 6:
         cadastroUsuarios(usuarios)
@@ -43,5 +49,5 @@ def main():
     usuarios={}
     escolhaMenu=0
     menu(escolhaMenu,usuarios)
-if __name__ == "__main__":
+if name == "main":
     main()
