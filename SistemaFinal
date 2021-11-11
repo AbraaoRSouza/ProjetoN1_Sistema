@@ -1,3 +1,16 @@
+def alterarNomeUsuario(usuarios):
+    busca=input("Digite o email do usuário: ")
+    removerItens = []
+    for chave, valor in usuarios.items(): 
+        if usuarios[chave] == busca:
+            removerItens.append(chave)
+
+    for item in removerItens:
+        usuarios.pop(item)
+        novoNome=input("Digite seu nome completo: ")
+        usuarios.update({novoNome:busca})
+
+    print(usuarios)
 def excluirUsuario(usuarios):
     busca=input("Digite o email do usuário: ")
     removerItens = []
